@@ -5,8 +5,15 @@ description = "Basic flask application"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "black>=25.1.0",
+    "coverage>=7.9.1",
+    "dash>=3.1.0",
+    "flake8>=7.3.0",
     "flask>=3.1.1",
     "flask-bootstrap>=3.3.7.1",
     "flask-moment>=1.0.6",
     "flask-wtf>=1.2.2",
+    "plotly>=6.2.0",
+    "pytest>=8.4.1",
+    "sqlalchemy>=2.0.41",
 ]
