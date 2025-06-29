@@ -1,3 +1,8 @@
+# personal files
+
+PLAN.md
+.env
+
 # Python
 __pycache__/
 *.py[cod]

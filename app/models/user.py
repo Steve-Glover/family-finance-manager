@@ -1,7 +1,6 @@
 from sqlalchemy import Integer, String
-from sqlalchemy.orm import relationship, declarative_base, Mapped, mapped_column
-
-Base = declarative_base()
+from sqlalchemy.orm import relationship, Mapped, mapped_column
+from . import Base
 
 class User(Base):
     """
@@ -12,7 +11,7 @@ class User(Base):
     :param email: Unique email address for the user.
     :param password_hash: Hashed password for authentication.
     """
-    __tablename__ = "users"
+    __tablename__ = "user"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     username: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
@@ -21,6 +20,12 @@ class User(Base):
 
     budgets = relationship("Budget", back_populates="user", cascade="all, delete-orphan")
     transactions = relationship("Transaction", back_populates="user", cascade="all, delete-orphan")
+
+    def __init__(self, username: str, email: str, password_hash: str) -> None:
+        super().__init__()
+        self.username = username
+        self.email = email
+        self.password_hash = password_hash
 
     def __repr__(self) -> str:
         return f"<User(username='{self.username}', email='{self.email}')>"

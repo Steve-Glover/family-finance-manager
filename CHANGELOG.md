@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [0.2.0] - 2025-06-29
+### Added
+- Implemented all core SQLAlchemy data models:
+  - `User` model in `app/models/user.py`
+  - `Category` model in `app/models/category.py`
+  - `Budget` model in `app/models/budget.py`
+  - `Transaction` model in `app/models/transaction.py`
+
+
+### Changed
+- Refined project structure under `app/models/` for clarity and maintainability.
+
+### Security
+- Reviewed all new code for security best practices and input validation.
+
 ## [0.1.2] - 2025-06-28
 ### Added
 - Added SQLAlchemy, Plotly, Dash, pytest, flake8, black, and coverage to project dependencies.
