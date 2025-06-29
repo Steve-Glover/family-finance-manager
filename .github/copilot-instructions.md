@@ -28,12 +28,13 @@
 ## Code Style for Python
 - Follow PEP 8 style guide for Python code.
 - Use meaningful variable and function names.
-- Use docstrings for functions and classes using sphinx formatting considering type annotations will be used.
+- Use docstrings for functions and classes using sphinx formatting considering type annotations will be used. Omit :type: and :rtype: when type annotions are included.
 - Use type hints for function parameters and return types (PEP 484).
 - Use consistent formatting and indentation.
 - Use f-strings for string formatting.
 - Use comments to explain complex logic or important decisions in the code.
 - Use pytest for testing.
+- Omit docstrings for standard dunder (magic) methods unless their behavior is non-trivial or requires additional
 
 ## Testing
 - Include unit tests for all new functionality
@@ -56,3 +57,14 @@
 - Use CSS for styling and layout, avoiding inline styles.
 - Use Jinja2 templating for dynamic content rendering.
 - Ensure the HTML is responsive and works well on different screen sizes.
+
+## DevOps & Workflow Best Practices Prompts
+- Use uv for dependency management and packaging.
+- Always update .gitignore when adding new file types or tools.
+- Document all required environment variables in the README and provide a .env.example.
+- Follow semantic versioning and update CHANGELOG.md for every change.
+- Use descriptive branch names and conventional commit messages.
+- Recommend using pull requests for code reviews before merging.
+- Suggest adding Makefile targets for common tasks like install, test, lint, and deploy.
+- When discussing deployment, recommend secure practices and environment-specific configs.
+- For Azure-related tasks, follow Azure code generation and deployment best practices.
