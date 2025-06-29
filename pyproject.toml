@@ -1,9 +1,12 @@
 [project]
 name = "flasky"
 version = "0.1.0"
-description = "Add your description here"
+description = "Basic flask application"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "flask>=3.1.1",
+    "flask-bootstrap>=3.3.7.1",
+    "flask-moment>=1.0.6",
+    "flask-wtf>=1.2.2",
 ]
